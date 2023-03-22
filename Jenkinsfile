@@ -25,5 +25,20 @@ pipeline {
                     onlyIfSuccessful: true
             }
         }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Report') {
+            steps {
+                echo 'Reporting....'
+            }
+        }
+    }
+    post {
+        always{
+            echo "CATS!!!"
+        }
     }
 }
